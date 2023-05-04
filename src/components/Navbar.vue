@@ -1,9 +1,18 @@
 <template>
   <div class="header_body">
     <div class="header_content">
-      <div class="logo">САМОЛЁТ SCUM</div>
-      <div class="nav_buttons">Кнопки</div>
-      <div class="login_panel"><button class="login_but">Войти <img :src="mySVG" alt=""/></button></div>
+      <div class="first_half">
+        <div class="logo">САМОЛЁТ SCUM</div>
+        <div class="nav_buttons">
+          <button>Инструкция</button>
+          <button>О нас</button>
+          <button>Услуги</button>
+        </div>
+      </div>
+
+      <div class="login_panel">
+        <button class="login_but">Войти <img :src="mySVG" alt=""/></button>
+      </div>
     </div>
   </div>
 </template>
@@ -22,19 +31,25 @@ export default {
 </script>
 
 <style scoped>
+
 .header_body {
   background-color: #FFFFFF;
   border-radius: 0 0 50px 50px;
-  padding: 1% 1% 1% 1%;
+  padding: 1% 1% 1.5% 1%;
 }
 
 .header_content {
   display: flex;
   flex-direction: row;
-  margin-left: 1%;
-  margin-right: 1%;
+
   justify-content: space-between;
 
+
+}
+.first_half{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
 }
 
@@ -45,18 +60,30 @@ export default {
   font-size: 32px;
   line-height: 39px;
   color: #007BFB;
+  margin-right: 10%;
+  white-space: nowrap;
 }
-.login_panel{
+
+.login_panel {
   display: flex;
   flex-direction: row;
 
+
+
 }
-.nav_buttons{
+
+.nav_buttons {
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+
+
 }
-.login_but{
+.nav_buttons button {
+  margin-left: 10%;
+}
+.login_but {
   background: #007BFB;
   border-radius: 50px;
   border: none;
@@ -66,7 +93,6 @@ export default {
   line-height: 29px;
   color: #FFFFFF;
   display: flex;
-  padding: 5%;
-
+  flex-direction: row;
 }
 </style>
