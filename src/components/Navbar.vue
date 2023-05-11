@@ -1,19 +1,14 @@
 <template>
   <div class="header_body">
-    <div class="header_content">
-      <div class="first_half">
-        <div class="logo">САМОЛЁТ SCUM</div>
-        <div class="nav_buttons">
-          <button>Инструкция</button>
-          <button>О нас</button>
-          <button>Услуги</button>
-        </div>
-      </div>
-
-      <div class="login_panel">
-        <button class="login_but">Войти <img :src="mySVG" alt=""/></button>
+    <div style="display: flex">
+      <a class="logo">Самолёт</a>
+      <div class="nav_buttons">
+        <button>Инструкция</button>
+        <button>О нас</button>
+        <button>Главная</button>
       </div>
     </div>
+    <button class="login_button">Войти</button>
   </div>
 </template>
 
@@ -35,13 +30,45 @@ export default {
 .header_body {
   background-color: #FFFFFF;
   border-radius: 0 0 50px 50px;
-  padding: 1% 1% 1.5% 1%;
+  padding: 1% 1% 1% 1%;
+  display: flex;
+  justify-content: space-between;
 }
-
+.logo{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  color: #007BFB;
+  margin-right: 10%;
+  white-space: nowrap;
+}
+.nav_buttons{
+  white-space: nowrap;
+}
+.nav_buttons button {
+  background: none;
+  border: none;
+  margin-left: 10%;
+}
+.login_button{
+  white-space: nowrap;
+  background: #007BFB;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  display: flex;
+  padding: 1%;
+  flex-wrap: nowrap;
+}
+/*
 .header_content {
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
 
 
@@ -58,15 +85,16 @@ export default {
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
-  line-height: 39px;
   color: #007BFB;
   margin-right: 10%;
   white-space: nowrap;
+
 }
 
 .login_panel {
   display: flex;
   flex-direction: row;
+  margin-right: 1%;
 
 
 
@@ -79,9 +107,14 @@ export default {
   justify-content: flex-start;
 
 
+
 }
+
 .nav_buttons button {
   margin-left: 10%;
+  border: none;
+  background: none;
+  white-space: nowrap;
 }
 .login_but {
   background: #007BFB;
@@ -93,6 +126,7 @@ export default {
   line-height: 29px;
   color: #FFFFFF;
   display: flex;
-  flex-direction: row;
-}
+  padding: 10%;
+  flex-wrap: nowrap;
+}*/
 </style>
